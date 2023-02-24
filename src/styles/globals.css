@@ -1,0 +1,281 @@
+:root {
+  --primary: #fdbb2d;
+  --black: #262626;
+  --white: #FFF;
+  --secundary: #22c1c3;
+  --fuente-principal: 'Outfit', sans-serif;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {  
+  display: block;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+.Header {
+  height: 6rem;
+  margin: 0 0 .2rem 0;
+  background-color: var(--primary);
+}
+
+.Header div a{
+  font-weight: 700;
+  padding: 20px 30px;
+  font-size: 2rem;
+  color: var(--black);
+}
+.Header div a {
+  text-decoration: none;
+}
+.footer {
+  background-color: var(--secundary);
+}
+.Content { 
+  margin: .2rem 0 .2rem 0;
+}
+.footer div {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px ;
+}
+.footer p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+}
+.contenedor-slide {
+  height: auto;
+  width: 80%;
+  display: block;
+  margin: 1rem auto 1rem auto;
+  padding: 1rem;
+  border: 1px solid var(--black);
+  border-radius: 15px;
+  background-color: var(--white);
+}
+.contenedor-slide h1 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+  margin: .2rem;
+}
+.ViewProducto {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding: .5rem;
+}
+.ModalProducto {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  outline:none;
+  width: 70%;
+  height: 80%;
+  background-color: var(--white);
+  margin: auto;
+  overflow: auto; 
+}
+
+
+.containerCard {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  background: #fff;
+}
+
+.containerCard .imgBx {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: .3s linear;
+}
+
+.containerCard .imgBx:before {
+  position: absolute;
+  top: 0px;
+  left: 24px;
+  color: var(--black);
+  opacity: 0.2;
+  font-size: 8em;
+  font-weight: 800;
+}
+
+.containerCard .imgBx img {
+  position: relative;
+  width: 250px;
+  transition: .9s linear;
+}
+
+.containerCard .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.containerCard .details h2{
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  line-height: 1em;
+  color: #444;
+}
+
+.containerCard .details h2 span {
+  font-size: 0.4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #999;
+}
+
+.containerCard .details p {
+  max-width: 85%;
+  margin-left: 15%;
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 36px;
+}
+
+.containerCard .details h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5em;
+  color: #a2a2a2;
+  float: left;
+}
+.containerCard .details button {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  margin-top: 5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 40px;
+  float: right;
+}
+
+.product-colors span {
+  width: 26px;
+  height: 26px;
+  top: 7px;
+  margin-right: 6px;
+  left: 10px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.product-colors .active:after{
+  content: "";
+  width: 36px;
+  height: 36px;
+  border: 2px solid #000;
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+  left: -5px;
+  top: -5px;
+}
+.closed {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+/* responsive */
+@media (max-width: 1080px) {
+  .ModalProducto {
+    height: 80%;
+    width: 80%;
+  }
+  .containerCard {
+    height: auto;
+    width: auto;
+  }
+  .containerCard .imgBx {
+      padding: 10px;
+      box-sizing: border-box;
+      width: 100% !important;
+      height: auto;
+      text-align: center;
+      overflow: hidden;
+  }
+  .containerCard .imgBx img {
+      left: -5%;
+      max-width: 100px;
+      max-height: 100px;
+  }
+  .details {
+      width: 100% !important;
+      height: auto;
+      padding: 0px;
+  }
+  .containerCard .details p {
+      margin-left: 0;
+      max-width: 100%;
+  }
+  .containerCard .details h2{
+    font-size: 1.5em;
+  }
+  .containerCard .details h3 {
+    font-size: 1.5em;
+    float: none;
+  }
+
+}
+@media (min-width: 1400px) {
+
+}
+
+.information,
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .detalleCarro {
+    flex: 1;
+  }
+  .detalleCarro h3 {
+    margin: 10px 0 10px 0;
+  }
+  .detalleCarro p {
+    margin: 10px 0 10px 0;
+  }
+  #imgcarro {
+    max-width: 80px;
+    object-fit: cover;
+    margin-left: 40px;
+  }
+  .carro-contenedor {
+    width: 500px;
+    padding: 20px;
+  }
+.carro-contenedor h2 {
+  margin: 20px 0 20px 0;
+}
+
+.usrIcon {
+  position: fixed;
+  top:20%;
+  left:5px;
+}
+
