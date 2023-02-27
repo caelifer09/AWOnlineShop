@@ -32,13 +32,19 @@ const Header = () => {
     }
     handleUsuario(user)
     handleModalUsuario()
+    if(carro.length !== 0){
+      handleMostrarCarro()
+    }
   }
-
   return (
    <>
      <header className='Header'>
       <Navbar />
-      <IconButton className='usrIcon' onClick={() => handleModalUsuario()}>
+      <IconButton sx={{
+        position: 'fixed',
+        top:'20%',
+        left:'5px',
+      }} onClick={() => handleModalUsuario()}>
         <Badge badgeContent={0} color="error">
           <Person2Icon fontSize='large' color={`${usuario ? 'success' : 'error'}`} />
         </Badge>
@@ -103,8 +109,7 @@ const Header = () => {
             </Box>
             )}
       </Box>
-    )}
-    
+    )}    
    </Drawer>
    </>
   )
